@@ -1,4 +1,8 @@
-![](https://github.com/adelbograyn/tatweerui-vue/blob/main/public/tatweer.png)
+<div align="center">
+  <picture>
+    <img alt="logo" height="200px" src="https://github.com/adelbograyn/tatweerui-vue/blob/main/public/tatweer.png">
+  </picture>
+</div>
 
 # Tatweer UI
 
