@@ -25,7 +25,3 @@ import { TPrimaryButton } from 'tatweerui-vue'
   <TPrimaryButton>Button</TPrimaryButton>
 </template>
 ```
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
