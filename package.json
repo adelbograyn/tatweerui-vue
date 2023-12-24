@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/adelbograyn/tatweerui-vue.git"
   },
-  "author": "Adel Bograyn <",
+  "author": "Adel Bograyn",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.umd.js",
