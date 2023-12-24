@@ -6,7 +6,7 @@
 
 # Tatweer UI
 
-### it's a UI library developed in [tatweer research company](https://tatweerresearch.org) for Vue based on [headless ui](https://headlessui.com/)
+### it's a UI library developed by [tatweer research company](https://tatweerresearch.org) for Vue based on [headless ui](https://headlessui.com/)
 
 ## Installation
 
