@@ -30,7 +30,7 @@
   ],
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com/",
+    "registry": "https://npm.pkg.github.com",
     "tag": "latest"
   },
   "scripts": {
@@ -49,7 +49,7 @@
     "@vitejs/plugin-vue": "^4.5.2",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
-    "semantic-release": "^22.0.12",
+    "semantic-release": "^20.1.0",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
