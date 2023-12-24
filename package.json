@@ -1,7 +1,19 @@
 {
   "name": "tatweerui-vue",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "Tatweer UI Vue Components",
+  "keywords": [
+    "vue",
+    "ui",
+    "components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adelbograyn/tatweerui-vue.git"
+  },
+  "author": "Adel Bograyn <",
+  "license": "MIT",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -22,7 +34,8 @@
   "scripts": {
     "dev": "vite",
     "build:css": "tailwindcss -i src/main.css -o public/index.css --postcss --minify",
-    "build": "npm run build:css && vue-tsc && vite build",
+    "build:fix": "echo \"import './index.css';\\n$(cat dist/index.es.js)\" > dist/index.es.js",
+    "build": "npm run build:css && vue-tsc && vite build && npm run build:fix",
     "preview": "vite preview"
   },
   "dependencies": {
