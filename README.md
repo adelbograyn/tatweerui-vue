@@ -1,4 +1,4 @@
-![](https://github.com/adelbograyn/tatweerui-vue/blob/main/public/tatweer.svg)
+![](https://github.com/adelbograyn/tatweerui-vue/blob/main/public/tatweer.png)
 
 # Tatweer UI
 
