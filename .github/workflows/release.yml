@@ -2,14 +2,10 @@ name: Release
 
 on:
   push:
-    branches: ["main", "next"]
-
+    branches:
+      - main
 jobs:
   release:
-    permissions:
-      contents: write
-      issues: write
-      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -19,6 +15,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
+          CI: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npx semantic-release

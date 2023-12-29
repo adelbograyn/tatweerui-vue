@@ -29,9 +29,7 @@
     "dist"
   ],
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com",
-    "tag": "latest"
+    "access": "public"
   },
   "scripts": {
     "dev": "vite",
