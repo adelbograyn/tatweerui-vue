@@ -7,12 +7,16 @@ on:
 
 jobs:
   release:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 20.10.0
+          node-version: 'lts/*'
       - run: npm ci
       - run: npm run build
         env:
