@@ -22,6 +22,6 @@ import { Button } from 'tatweerui-vue'
 </script>
 
 <template>
-  <Button>Button</Button>
+  <Button variant="primary | secondary">Button</Button>
 </template>
 ```
