@@ -1,10 +1,6 @@
 name: Release
-
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 jobs:
@@ -15,9 +11,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
-      - run: npm i
-      - run: npm run build
-      - run: npx semantic-release
+      - run: npm ci
+      - run: npm run release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

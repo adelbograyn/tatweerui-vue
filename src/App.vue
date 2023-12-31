@@ -1,15 +1,12 @@
 <script lang="ts" setup>
-import TPrimaryButton from "./components/TPrimaryButton.vue"
-import TSecondaryButton from "./components/TSecondaryButton.vue"
+import Button from "./components/Button.vue"
 </script>
 
 <template>
   <div class="absolute inset-0 flex justify-center items-center gap-4 bg-gray-200">
-      <TPrimaryButton :is-loading="true">
+      <Button variant="primary">
         Hello
-      </TPrimaryButton>
-      <TSecondaryButton>
-        Hello
-      </TSecondaryButton>
+      </Button>
+
   </div>
 </template>

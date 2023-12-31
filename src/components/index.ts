@@ -1,7 +1,5 @@
-import TPrimaryButton from "./TPrimaryButton.vue"
-import TSecondaryButton from "./TSecondaryButton.vue";
+import Button from "./Button.vue"
 
 export {
-    TPrimaryButton,
-    TSecondaryButton,
+    Button,
 }

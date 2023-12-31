@@ -18,10 +18,10 @@ npm install tatweerui-vue
 
 ```vue
 <script setup>
-import { TPrimaryButton } from 'tatweerui-vue'
+import { Button } from 'tatweerui-vue'
 </script>
 
 <template>
-  <TPrimaryButton>Button</TPrimaryButton>
+  <Button>Button</Button>
 </template>
 ```
