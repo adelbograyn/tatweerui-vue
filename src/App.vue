@@ -9,7 +9,7 @@ const checked = ref(false)
 
 <template>
   <div class="absolute inset-0 grid justify-center items-center gap-4 bg-gray-200">
-    <Button :variant="ButtonVariantEnum.primary">
+    <Button :variant="ButtonVariantEnum.PRIMARY">
       Hello
     </Button>
     <Switch :isChecked="checked" class="w-80" @on-checked="">Hello</Switch>
