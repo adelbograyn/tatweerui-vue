@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import Button from "./components/Button.vue"
-import {Switch} from "./index";
+import Switch from "./components/Switch.vue"
 </script>
 
 <template>
