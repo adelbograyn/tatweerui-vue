@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import Button from "./components/Button.vue"
+import {Switch} from "./index";
 </script>
 
 <template>
@@ -7,6 +8,7 @@ import Button from "./components/Button.vue"
       <Button variant="primary">
         Hello
       </Button>
+    <Switch :isChecked="true" prop="Hello" fieldId="1" type="string" @changeEvent="console.log($event)"/>
 
   </div>
 </template>
