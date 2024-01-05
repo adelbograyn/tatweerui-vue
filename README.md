@@ -28,3 +28,15 @@ import { Button, Switch, ButtonVariant } from 'tatweerui-vue'
   <Switch :isChecked="checked" @on-checked="(isChecked)=>isChecked">World</Switch>
 </template>
 ```
+
+## Components
+- [x] Button: 
+  - [x] Primary
+  - [x] Secondary
+- [x] Switch
+- [x] ListSection
+- [x] ListTile
+
+![Screenshot 2024-01-05 at 9.54.54 pm.png](src%2Fassets%2Fimages%2FScreenshot%202024-01-05%20at%209.54.54%E2%80%AFpm.png)
+![Screenshot 2024-01-05 at 10.04.23 pm.png](src%2Fassets%2Fimages%2FScreenshot%202024-01-05%20at%2010.04.23%E2%80%AFpm.png)
+![Screenshot 2024-01-05 at 9.54.25 pm.png](src%2Fassets%2Fimages%2FScreenshot%202024-01-05%20at%209.54.25%E2%80%AFpm.png)
