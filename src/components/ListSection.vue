@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-defineProps<{
-  title: {
-    type: string,
-    required: true,
-  }
-}>()
+type Props = {
+  title: string,
+}
+
+defineProps<Props>()
 </script>
 
 <template>

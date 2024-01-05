@@ -4,7 +4,7 @@ import Switch from './components/Switch.vue'
 import { ButtonVariant } from './utils/enums'
 import { ref } from 'vue'
 import ListSection from './components/ListSection.vue'
-import ListTile from '@/components/ListTile.vue'
+import ListTile from './components/ListTile.vue'
 
 const checked = ref(false)
 </script>
@@ -17,7 +17,7 @@ const checked = ref(false)
     <div class='w-80'>
       <ListSection title='List Section'>
         <ListTile title='List Tile Title' subtitle='subtitle' v-for='i in 5'>
-            <Switch :isChecked="checked" class="w-80" />
+            <Switch :isChecked="checked" />
         </ListTile>
       </ListSection>
     </div>

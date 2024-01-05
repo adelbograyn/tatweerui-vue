@@ -25,7 +25,7 @@ import { Button, Switch, ButtonVariant } from 'tatweerui-vue'
   <Button :variant="ButtonVariant.PRIMARY">
     Hello
   </Button>
-  <Switch :isChecked="checked" @on-checked="(isChecked)=>isChecked">World</Switch>
+  <Switch :isChecked="true" @on-checked="(isChecked)=>isChecked">World</Switch>
 </template>
 ```
 
@@ -39,4 +39,11 @@ import { Button, Switch, ButtonVariant } from 'tatweerui-vue'
 
 ![Screenshot 2024-01-05 at 9.54.54 pm.png](src%2Fassets%2Fimages%2FScreenshot%202024-01-05%20at%209.54.54%E2%80%AFpm.png)
 ![Screenshot 2024-01-05 at 10.04.23 pm.png](src%2Fassets%2Fimages%2FScreenshot%202024-01-05%20at%2010.04.23%E2%80%AFpm.png)
+```vue
+<ListSection title='List Section'>
+  <ListTile title='List Tile Title' subtitle='subtitle'>
+    <Switch :isChecked="true"/>
+  </ListTile>
+</ListSection>
+```
 ![Screenshot 2024-01-05 at 9.54.25 pm.png](src%2Fassets%2Fimages%2FScreenshot%202024-01-05%20at%209.54.25%E2%80%AFpm.png)
