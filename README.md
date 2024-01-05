@@ -18,10 +18,13 @@ npm install tatweerui-vue
 
 ```vue
 <script setup>
-import { Button } from 'tatweerui-vue'
+import { Button, Switch, ButtonVariant } from 'tatweerui-vue'
 </script>
 
 <template>
-  <Button variant="primary | secondary">Button</Button>
+  <Button :variant="ButtonVariant.PRIMARY">
+    Hello
+  </Button>
+  <Switch :isChecked="checked" @on-checked="(isChecked)=>isChecked">World</Switch>
 </template>
 ```

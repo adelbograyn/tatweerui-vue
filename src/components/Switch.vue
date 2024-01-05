@@ -27,7 +27,7 @@ const onChecked = () => {
       </SwitchLabel>
       <Switch
           v-model="checked"
-          :class="checked ? 'bg-gradient-to-r from-blue-500 to-blue-600' : 'bg-gray-300'"
+          :class="checked ? 'bg-gradient-to-r from-primary to-primary-dim' : 'bg-gray-300'"
           class="relative inline-flex h-[28px] w-[50px] shrink-0 cursor-default rounded-full"
           @click="onChecked"
       >
