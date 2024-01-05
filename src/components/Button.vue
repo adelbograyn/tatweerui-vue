@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ButtonVariantEnum } from '@/utils/enums'
+import { ButtonVariantEnum } from '../utils/enums'
 
 interface Props {
   variant: ButtonVariantEnum,
