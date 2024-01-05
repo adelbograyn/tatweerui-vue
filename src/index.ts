@@ -1,7 +1,8 @@
-import Button from "./components/Button.vue"
-import Switch from "./components/Switch.vue"
+import Button from './components/Button.vue'
+import Switch from './components/Switch.vue'
 
 export {
-    Button,
-    Switch,
+  Button,
+  Switch,
 }
+export * from './utils/enums'
