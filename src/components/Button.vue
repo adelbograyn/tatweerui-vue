@@ -1,43 +1,43 @@
 <script lang="ts" setup>
-export declare type ButtonVariant = 'primary' | 'secondary'
+import { ButtonVariantEnum } from '@/utils/enums'
 
-type Props = {
-  variant: ButtonVariant,
+interface Props {
+  variant: ButtonVariantEnum,
   isLoading: boolean,
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  variant: 'primary',
+  variant: ButtonVariantEnum.primary,
   isLoading: false,
 })
 </script>
 
 <template>
   <button
-      :class="props.variant == 'primary' ? 'bg-gradient-to-b from-primary to-primary-dim active:shadow-inner active:bg-gradient-to-b active:from-primary-dim active:to-primary disabled:cursor-not-allowed disabled:active:bg-bg-gradient-to-b disabled:active:from-primary disabled:active:to-primary-dim disabled:shadow-none text-on-primary focus:outline-none cursor-default px-4 py-1 rounded shadow-xl flex justify-center items-center gap-2 min-w-20 min-h-8 max-w-full' : 'border-s border-e border-primary active:shadow-inner text-primary focus:outline-none cursor-default px-4 py-1 rounded shadow-xl flex justify-center items-center gap-2 min-w-20 min-h-8 max-w-full'"
-      :disabled="isLoading"
+    :class="props.variant == ButtonVariantEnum.primary ? 'bg-gradient-to-b from-primary to-primary-dim active:shadow-inner active:bg-gradient-to-b active:from-primary-dim active:to-primary disabled:cursor-not-allowed disabled:active:bg-bg-gradient-to-b disabled:active:from-primary disabled:active:to-primary-dim disabled:shadow-none text-on-primary focus:outline-none cursor-default px-4 py-1 rounded shadow-xl flex justify-center items-center gap-2 min-w-20 min-h-8 max-w-full' : 'border-s border-e border-primary active:shadow-inner text-primary focus:outline-none cursor-default px-4 py-1 rounded shadow-xl flex justify-center items-center gap-2 min-w-20 min-h-8 max-w-full'"
+    :disabled="isLoading"
   >
     <svg
-        v-if="isLoading"
-        class="animate-spin min-h-5 min-w-5 max-h-5 max-w-5 text-on-primary"
-        fill="none"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg">
+      v-if="isLoading"
+      class="animate-spin min-h-5 min-w-5 max-h-5 max-w-5 text-on-primary"
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg">
       <circle
-          class="opacity-25"
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          stroke-width="4"/>
+        class="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        stroke-width="4" />
       <path
-          class="opacity-75"
-          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0
+        class="opacity-75"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0
             12h4zm2 5.291A7.962 7.962 0 014 12H0c0
             3.042 1.135 5.824 3 7.938l3-2.647z"
-          fill="currentColor">
+        fill="currentColor">
       </path>
     </svg>
-    <slot v-else/>
+    <slot v-else />
   </button>
 </template>

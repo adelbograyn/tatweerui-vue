@@ -1,31 +1,31 @@
-<script setup lang="ts">
-import {ref} from "vue"
+<script lang="ts" setup>
 import {Switch, SwitchGroup, SwitchLabel} from '@headlessui/vue'
+import {ref} from "vue";
 
-const props = defineProps({
-  isChecked: {
-    type: Boolean,
-    default: false,
-  },
-  title: String,
-})
+interface Props {
+  isChecked?: boolean,
+}
+interface Emits {
+  (e: 'onChecked', isChecked: boolean): void
+}
 
+const props = defineProps<Props>()
+const emits = defineEmits<Emits>()
 
-const checked =  ref(props.isChecked)
-const emit = defineEmits(['changeEvent'])
-
+const checked = ref(props.isChecked)
 const onChecked = () => {
   checked.value = !checked.value
-  emit('changeEvent', {checked: checked.value, title: props.title})
+  emits('onChecked', checked.value)
 }
 </script>
 
 <template>
   <SwitchGroup>
     <div class="flex items-center w-full justify-between">
-      <SwitchLabel class="mr-4" passive>{{ props.title }}</SwitchLabel>
+      <SwitchLabel class="mr-4" passive>
+        <slot/>
+      </SwitchLabel>
       <Switch
-          v-slot="{ checked }"
           v-model="checked"
           :class="checked ? 'bg-gradient-to-r from-blue-500 to-blue-600' : 'bg-gray-300'"
           class="relative inline-flex h-[28px] w-[50px] shrink-0 cursor-default rounded-full"
