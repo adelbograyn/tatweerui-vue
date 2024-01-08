@@ -2,7 +2,7 @@
 import { ButtonVariant } from '../utils/enums'
 
 interface Props {
-  variant?: ButtonVariant,
+  variant?: ButtonVariant | string,
   isLoading?: boolean,
 }
 

@@ -1,7 +1,7 @@
 {
   "name": "tatweerui-vue",
   "private": false,
-  "version": "0.3.11",
+  "version": "0.3.12",
   "description": "Tatweer UI Vue Components",
   "keywords": [
     "vue",
