@@ -2,8 +2,8 @@
 import { ButtonVariant } from '../utils/enums'
 
 interface Props {
-  variant: ButtonVariant,
-  isLoading: boolean,
+  variant?: ButtonVariant,
+  isLoading?: boolean,
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -14,8 +14,9 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <button
-    :class="props.variant == ButtonVariant.PRIMARY ? 'bg-gradient-to-b from-primary to-primary-dim active:shadow-inner active:bg-gradient-to-b active:from-primary-dim active:to-primary disabled:cursor-not-allowed disabled:active:bg-bg-gradient-to-b disabled:active:from-primary disabled:active:to-primary-dim disabled:shadow-none text-on-primary focus:outline-none cursor-default px-4 py-1 rounded shadow-xl flex justify-center items-center gap-2 min-w-20 min-h-8 max-w-full' : 'border-s border-e border-t border-b border-primary active:shadow-inner text-primary focus:outline-none cursor-default px-4 py-1 rounded shadow-xl flex justify-center items-center gap-2 min-w-20 min-h-8 max-w-full'"
+    :class="props.variant == ButtonVariant.PRIMARY ? 'bg-gradient-to-b from-primary to-primary-dim active:shadow-inner active:bg-gradient-to-b active:from-primary-dim active:to-primary disabled:cursor-not-allowed disabled:active:bg-bg-gradient-to-b disabled:active:from-primary disabled:active:to-primary-dim disabled:shadow-none text-on-primary focus:outline-none flex justify-center items-center gap-2 min-w-20 min-h-8 max-w-full' : 'border-s border-e border-t border-b border-primary active:shadow-inner text-primary focus:outline-none cursor-default flex justify-center items-center gap-2 min-w-20 min-h-8 max-w-full'"
     :disabled="isLoading"
+    class='cursor-default px-4 py-2 rounded-lg shadow-xl'
   >
     <svg
       v-if="isLoading"

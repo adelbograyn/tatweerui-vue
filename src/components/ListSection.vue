@@ -9,7 +9,7 @@ defineProps<Props>()
 <template>
   <div>
     <label class='font-bold ms-4'>{{ title }}</label>
-    <div class='bg-white ps-4 rounded-lg mt-1'>
+    <div class='bg-white rounded-lg mt-1'>
       <slot />
     </div>
   </div>

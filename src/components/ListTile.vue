@@ -8,13 +8,15 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div class='flex justify-between items-center border-b w-full pe-4 py-2'>
-    <div>
-      <div>{{ title }}</div>
-      <div class='text-xs text-gray-500'>{{ subtitle }}</div>
-    </div>
-    <div class=''>
-      <slot />
+  <div class='px-4'>
+    <div class='flex justify-between items-center border-b w-full py-2'>
+      <div>
+        <div>{{ title }}</div>
+        <div class='text-xs text-gray-500'>{{ subtitle }}</div>
+      </div>
+      <div class=''>
+        <slot />
+      </div>
     </div>
   </div>
 </template>

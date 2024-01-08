@@ -5,8 +5,12 @@ import { ButtonVariant } from './utils/enums'
 import { ref } from 'vue'
 import ListSection from './components/ListSection.vue'
 import ListTile from './components/ListTile.vue'
+import InfoDialog from './components/InfoDialog.vue'
 
 const checked = ref(false)
+const onClicked = () => {
+  alert('AA')
+}
 </script>
 
 <template>
@@ -16,10 +20,13 @@ const checked = ref(false)
     </Button>
     <div class='w-80'>
       <ListSection title='List Section'>
-        <ListTile title='List Tile Title' subtitle='subtitle' v-for='i in 5'>
-            <Switch :isChecked="checked" />
+        <ListTile v-for='i in 5' subtitle='subtitle' title='List Tile Title'>
+          <Switch :isChecked="checked" />
         </ListTile>
       </ListSection>
     </div>
+    <InfoDialog :is-open='true' title='Info Dialog' :on-button-clicked='onClicked'>
+      message for info dialog
+    </InfoDialog>
   </div>
 </template>
